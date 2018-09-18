@@ -29,6 +29,5 @@ int main()
 			printf("\n\nCaracter digitado e multiplo de 3");
 		else
 			printf("\n\nCaracter digitado nao e multiplo de 3");
-	getch();
 	return 0;
 }

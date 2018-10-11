@@ -1,0 +1,112 @@
+//playfair
+#include <stdio.h>
+#include <conio2.h>
+#include <string.h>
+
+//clrscr(); apaga tudo
+void preenche_palavra(palavra)
+{
+	gotoxy(9,12);
+	fflush(stdin);
+	gets(palavra);
+	
+}
+void preenche_chave(char matriz[][5], char chave)
+{
+	int i;
+	char aux[26], aux2[2];
+	gotoxy(10,12);
+	fflush(stdin);
+	gets(chave);
+	for(i=0;chave[i] != '\0'; i++)
+	{
+		chave[i] = toupper(chave[i]);//coloca tudo maiusculo
+	}
+	for(i=0;chave[i]!='\0'; i++)//retirar os espaços
+	{
+		if(chave[i] >= 65 && chave[i] <= 90)
+		{
+			aux[i] = chave[i];
+			axu2[i] = aux[i];
+			chave[i] = aux2[i];
+		}
+		
+	}
+}
+	
+}
+int main()
+{
+	int i, n, cont=1;
+	char palavra[26], chave[26], matriz[5][5];
+	textcolor(YELLOW);
+	textbackground(RED);
+	gotoxy(1,1);
+	printf("\xC9");
+	for(i=0;i<78;i++)
+	{
+		printf("\xCD");
+	}
+	printf("\xBB");
+	gotoxy(1,2);
+	printf("\xBA                               CIFRA PLAYFAIR                                 \xBA");
+	gotoxy(1,3);
+	printf("\xC8");
+	for(i=0;i<78;i++)
+	{
+		printf("\xCD");
+	}
+	printf("\xBC");
+	textcolor(WHITE);
+	gotoxy(1,4);
+	textbackground(BLACK);
+	printf("[1] Inserir uma palavra\n[2] Inserir uma chave\n[3] Criptografar a palavra inserida\n[4] Descriptografar a palavra inserida\n[5] Limpar tudo\n[6] Sair do programa\n\n");
+	textcolor(YELLOW);
+	for(i=0;i<79;i++)
+	{
+		printf("\xC4");
+	}
+	textcolor(WHITE);
+	printf("\nOp\x87\xc6o:            ");
+	printf("STATUS: ");
+	printf("\nFrase: ");
+	printf("\nChave: ");
+	printf("\nResultado: ");
+	printf("                       ");
+	textbackground(RED);
+	textcolor(YELLOW);
+	gotoxy(35,15);
+	printf("M A T R I Z");
+	gotoxy(76,15);
+	textbackground(BLACK);
+	gotoxy(1,16);
+
+	printf("                               ");
+	printf("\xDA");
+	for(i=0;i<15;i++)
+	{
+		printf("\xC4");
+	}
+	printf("\xBF\n");
+	for(i=0;i<8;i++)
+	printf("                               \xB3               \xB3\n");
+	printf("                               \xC0");
+	for(i=0;i<15;i++)
+	{
+		printf("\xC4");
+	}
+	printf("\xD9");
+	gotoxy(8,12);
+	scanf("%d", &n);
+	switch(n)
+	{
+		case 1:
+			preenche_palavra(palavra);
+			break;
+			
+		case 2:
+			preenche_chave(matriz, chave);
+			break
+	}
+	return 0;
+}
